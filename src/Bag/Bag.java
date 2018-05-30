@@ -1,3 +1,5 @@
+package Bag;
+
 /**
  * Bags contain things, in respect to the real world, bags are a type of container.
  * In Java, or any programming language, a container is an object whose class extends the standard Container class.
@@ -34,17 +36,8 @@
  *  +toArray() : T[]
  *
  */
-public class Bag {
+public class Bag<T> {
 
-    public int size() {
-        return 1;
-    }
 
-    public boolean isFull() {
-        return true;
-    }
-
-    public boolean isEmpty() {
-        return false;
-    }
 }
+
