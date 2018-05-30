@@ -14,6 +14,14 @@ public class BagTest {
         }
         displayBag(wordBank);
         displayBag(fullBag);
+        wordBank.add("REDDIT");
+        displayBag(wordBank);
+        fullBag.remove();
+        fullBag.remove();
+        displayBag(fullBag);
+        wordBank.remove("A");
+        displayBag(wordBank);
+        System.out.println("A appears in wordBank : " + wordBank.getFrequencyOf("A") + ", # of times.");
     }
 
     public static void displayBag(BagInterface<String> bag) {
