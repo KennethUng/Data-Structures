@@ -7,6 +7,7 @@ public class BagTest {
 
         BagInterface<String> wordBank = new ArrayBag<String>();
         BagInterface<String> fullBag = new ArrayBag<String>(6);
+        BagInterface<String> resizeableArray = new ResizeableArrayBag<String>(2);
         String[] addToBag = {"A","A","B","A","C","A"};
         for(int i = 0; i < addToBag.length; i++) {
             wordBank.add(addToBag[i]);
@@ -22,6 +23,18 @@ public class BagTest {
         wordBank.remove("A");
         displayBag(wordBank);
         System.out.println("A appears in wordBank : " + wordBank.getFrequencyOf("A") + ", # of times.");
+        System.out.println("---------------------------------------");
+        System.out.println("Test for ResizeableArrayBag: \nCurrent Size: " + ((ResizeableArrayBag<String>) resizeableArray).bagSize());
+        resizeableArray.add("1");
+        resizeableArray.add("2");
+        displayBag(resizeableArray);
+        resizeableArray.add("3");
+        System.out.println("Current Size: " + ((ResizeableArrayBag<String>) resizeableArray).bagSize());
+        resizeableArray.add("4");
+        resizeableArray.add("5");
+        displayBag(resizeableArray);
+        System.out.println("Current Size: " + ((ResizeableArrayBag<String>) resizeableArray).bagSize());
+        
     }
 
     public static void displayBag(BagInterface<String> bag) {
