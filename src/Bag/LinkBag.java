@@ -1,5 +1,14 @@
 package Bag;
 
+/**
+ * This is more or less considered a chain of Objects that are linked together.
+ * Chains take more memory than arrays even though they both contain a reference to a data Object.
+ *      (1) Chains also have references to the next Node in the chain.
+ *              So it takes more memory but only uses memory as needed.
+ *              Arrays you have more space than necessary, so that memory is also wasted.
+ * @param <T>
+ */
+
 public class LinkBag<T> implements BagInterface<T> {
 
     private Node root;
@@ -123,6 +132,26 @@ public class LinkBag<T> implements BagInterface<T> {
         private Node(T value, Node nextNode) {
             this.value = value;
             this.nextNode = nextNode;
+        }
+
+        /**
+         *  These methods aren't necessary since this is an inner class, but it's good to know.
+         *  Instead of accessing the private data of the Node class, we would instead use these get/set methods to access and change the values of each Node.
+         **/
+        public T getValue() {
+            return this.value;
+        }
+
+        public Node getNextNode() {
+            return this.nextNode;
+        }
+
+        public void setvalue(T value) {
+            this.value = value;
+        }
+
+        public void setNextNode(Node next) {
+            this.nextNode = next;
         }
 
     }
