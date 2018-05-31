@@ -1,5 +1,7 @@
 package Bag;
 
+import java.util.Random;
+
 public class BagTest {
 
     public static void main(String [] args) {
@@ -34,7 +36,12 @@ public class BagTest {
         resizeableArray.add("5");
         displayBag(resizeableArray);
         System.out.println("Current Size: " + ((ResizeableArrayBag<String>) resizeableArray).bagSize());
-        
+        System.out.println("---------------------------------------\nTest for LinkBag (using Nodes)");
+        BagInterface<String> linkBag = new LinkBag<String>();
+        addRandomValues(linkBag);
+        displayBag(linkBag);
+
+
     }
 
     public static void displayBag(BagInterface<String> bag) {
@@ -44,6 +51,14 @@ public class BagTest {
             System.out.print(myBag[i] + " ");
         }
         System.out.println();
+    }
+
+    public static void addRandomValues(BagInterface<String> bag) {
+        Random rd = new Random();
+        int select = rd.nextInt(15) + 1;
+        for(int i = 0; i < select; i++) {
+            bag.add("" + rd.nextInt(50) + "");
+        }
     }
 
 
