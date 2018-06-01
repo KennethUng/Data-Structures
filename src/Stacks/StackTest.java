@@ -18,6 +18,13 @@ public class StackTest {
         System.out.println();
         removeAndPrint(arrayTest);
         System.out.println("\n---------------------------");
+        System.out.println("Vector Stack Test");
+        StackInterface<String> vectorTest = new VectorStack<String>(10);
+        addTo(vectorTest);
+        addTo(vectorTest);
+        System.out.println();
+        removeAndPrint(vectorTest);
+        System.out.println("\n---------------------------");
 
     }
 
