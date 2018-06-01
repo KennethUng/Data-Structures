@@ -12,6 +12,13 @@ public class StackTest {
         System.out.println();
         removeAndPrint(chainTest);
         System.out.println("\n---------------------------");
+        System.out.println("Array Stack Test");
+        StackInterface<String> arrayTest = new ArrayStack<String>(10);
+        addTo(arrayTest);
+        addTo(arrayTest);
+        System.out.println();
+        removeAndPrint(arrayTest);
+        System.out.println("\n---------------------------");
 
     }
 
