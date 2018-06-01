@@ -36,7 +36,7 @@ public class LinkedStack<T> implements StackInterface<T> {
     }
 
     public void clear() {
-        top = null; //Since top is pointing to nothing now, the nodes are all dereferenced. 
+        top = null; //Since top is pointing to nothing now, the nodes are all dereferenced.
     }
 
 
